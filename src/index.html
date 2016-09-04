@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Plugins and template</title>
+  <link rel="stylesheet" href="css/myCaruosel.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="js/myCarousel.js"></script>
+  <script src="js/script.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h2>Plugin</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel-arrows carousel-arrow-left"><span>Влево</span></div>
+      <div class="carousel-hider">
+        <ul class="carousel-list">
+          <li class="carousel-element"><img src="img/img1.jpg">
+            <p>Описание 1</p>
+          </li>
+          <li class="carousel-element"><img src="img/img2.jpg">
+            <p>Описание 2</p>
+          </li>
+          <li class="carousel-element"><img src="img/img3.jpg">
+            <p>Описание 3</p>
+          </li>
+          <li class="carousel-element"><img src="img/img4.jpg">
+            <p>Описание 4</p>
+          </li>
+          <li class="carousel-element"><img src="img/img1.jpg">
+            <p>Описание 5</p>
+          </li>
+          <li class="carousel-element"><img src="img/img2.jpg">
+            <p>Описание 6</p>
+          </li>
+          <li class="carousel-element"><img src="img/img3.jpg">
+            <p>Описание 7</p>
+          </li>
+          <li class="carousel-element"><img src="img/img4.jpg">
+            <p>Описание 8</p>
+          </li>
+          <li class="carousel-element"><img src="img/img1.jpg">
+            <p>Описание 9</p>
+          </li>
+          <li class="carousel-element"><img src="img/img2.jpg">
+            <p>Описание 10</p>
+          </li>
+          <li class="carousel-element"><img src="img/img3.jpg">
+            <p>Описание 11</p>
+          </li>
+          <li class="carousel-element"><img src="img/img4.jpg">
+            <p>Описание 12</p>
+          </li>
+          <li class="carousel-element"><img src="img/img1.jpg">
+            <p>Описание 13</p>
+          </li>
+        </ul>
+      </div>
+      <div class="carousel-arrows carousel-arrow-right"><span>Вправо</span></div>
+    </div>
+    <h2>Temlate</h2>
+    <div class="temp-wrap"></div>
+    <script type="text/html" id="user">
+      <div class="profile-wrap">
+        <h1><%= firstName + ' '+ lastName %></h1>
+        <div class="img-wrap">
+          <img src="img/jobs.jpg" alt="photo" height="130" title="jobs">
+        </div>
+        <p class="profile-text">
+          <%=status%>
+        </p>
+        <hr>
+        <p class="profile-text">Хочу учить фронтерд, потому что:</p>
+        <ul class="why">
+          <% for(var i=0; i< objectives.length; i++){ %>
+            <li>
+              <%= objectives[i] %>
+            </li>
+            <% }; %>
+        </ul>
+        <hr>
+        <p class="profile-text">Мой контактный телефон:
+          <p>
+            <%=phone%>
+          </p>
+        </p>
+        <p class="profile-text">Мой профиль facebook:
+          <p><a href="<%=fb%>">facebook.com</a></p>
+
+        </p>
+        <hr>
+        <p class="profile-text">Мой фидбек:
+          <p>
+            <%=feedback%>
+          </p>
+        </p>
+      </div>
+
+    </script>
+  </div>
+  <script src="js/jr-tmpl.js"></script>
+  <script src="js/profile.js"></script>
+
+</body>
+
+</html>
